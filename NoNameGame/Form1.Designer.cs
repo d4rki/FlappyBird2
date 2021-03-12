@@ -70,6 +70,7 @@ namespace NoNameGame
             this.button2.TabIndex = 3;
             this.button2.Text = "Best";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
@@ -82,7 +83,7 @@ namespace NoNameGame
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Flappy Bird 2";
+            this.Text = "NNG";
             this.ResumeLayout(false);
             this.PerformLayout();
 

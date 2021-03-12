@@ -9,7 +9,6 @@ namespace NoNameGame
     class MovedBarier : Barier
     {
 
-        bool direction;     //направление движения (вверх/вниз)
         int speed;          //скорость движения
         public MovedBarier()
         {
@@ -18,13 +17,14 @@ namespace NoNameGame
             //и оставшиеся
             Random rnd = new Random();
 
-            int tmp = rnd.Next(0, 1);
-            if (tmp == 0)
-                direction = true;
-            else
-                direction = false;
+            //скорость перемещения по вертикали
+            speed = rnd.Next(-5, 5);
+        }
 
-            speed = rnd.Next(0, 20);
+        public void MoveY(int sp)
+        {
+            pos.x -= sp;
+            pos.y += speed;
         }
 
     }

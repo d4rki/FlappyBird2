@@ -16,7 +16,7 @@ namespace NoNameGame
         }
 
         //длина и ширина экрана
-        protected readonly point FormSize = new point() { x = 550, y = 1000 };
+        protected readonly point FormSize = new point() { x = 1000, y = 550 };
 
         //координаты для чего-либо
         protected point pos;

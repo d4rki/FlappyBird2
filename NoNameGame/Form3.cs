@@ -15,6 +15,13 @@ namespace NoNameGame
         public Form3()
         {
             InitializeComponent();
+            State st = new State();
+            List<String> rec = st.GetRecords();
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

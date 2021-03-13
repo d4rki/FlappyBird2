@@ -65,6 +65,8 @@ namespace NoNameGame
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 203);
             this.Controls.Add(this.dataGridView1);
+            this.MaximumSize = new System.Drawing.Size(393, 242);
+            this.MinimumSize = new System.Drawing.Size(393, 242);
             this.Name = "Form3";
             this.Text = "Records";
             this.Load += new System.EventHandler(this.Form3_Load);

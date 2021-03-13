@@ -82,6 +82,8 @@ namespace NoNameGame
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.MaximumSize = new System.Drawing.Size(236, 167);
+            this.MinimumSize = new System.Drawing.Size(236, 167);
             this.Name = "Form1";
             this.Text = "NNG";
             this.ResumeLayout(false);

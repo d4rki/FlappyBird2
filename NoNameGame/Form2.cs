@@ -22,7 +22,6 @@ namespace NoNameGame
         List<MovedBarier> mv_bar;   //движущиеся препятствия
         int adding = 50;           //добваление нового куска препятствия
         bool end = false;          //конец
-        int buff = 2;                //увеличенная скорость передвижения игрока
 
         Bitmap buf;
         Graphics g;
@@ -108,16 +107,16 @@ namespace NoNameGame
             switch (road)
             {
                 case 0:
-                    pl.Move(0, -pl.speed - buff);
+                    pl.Move(0, -pl.speed - pl.buff);
                     break;
                 case 1:
-                    pl.Move(0, pl.speed + buff);
+                    pl.Move(0, pl.speed + pl.buff);
                     break;
                 case 2:
-                    pl.Move(-pl.speed - buff, 0);
+                    pl.Move(-pl.speed - pl.buff, 0);
                     break;
                 case 3:
-                    pl.Move(pl.speed + buff, 0);
+                    pl.Move(pl.speed + pl.buff, 0);
                     break;
             }
 
@@ -187,7 +186,6 @@ namespace NoNameGame
 
         private void Form2_KeyDown(object sender, KeyEventArgs e)
         {
-
             switch (e.KeyCode)
             {
                 case Keys.W:
@@ -203,7 +201,6 @@ namespace NoNameGame
                     road = 3;
                     break;
             }
-
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)

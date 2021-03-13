@@ -8,7 +8,8 @@ namespace NoNameGame
 {
     class Player : BaseDate
     {
-        public int speed; //скорость модельки
+        public int speed; //обычная скорость
+        public int buff;
 
         //стартовая инициализация
         public Player()
@@ -18,6 +19,7 @@ namespace NoNameGame
             pos.x = 10;     //стартовая позиция игрока х
             pos.y = FormSize.y/2;     //стартовая позиция игрока y
             speed = 4;
+            buff = 2;
         }
 
         //перемещение игрока

@@ -77,6 +77,8 @@ namespace NoNameGame
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
+            this.MaximumSize = new System.Drawing.Size(1203, 615);
+            this.MinimumSize = new System.Drawing.Size(1203, 615);
             this.Name = "Form2";
             this.Text = "Play!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);

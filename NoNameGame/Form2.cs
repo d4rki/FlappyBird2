@@ -22,6 +22,7 @@ namespace NoNameGame
         List<MovedBarier> mv_bar;   //движущиеся препятствия
         int adding = 50;           //добваление нового куска препятствия
         bool end = false;          //конец
+        int buff = 2;                //увеличенная скорость передвижения игрока
 
         Bitmap buf;
         Graphics g;
@@ -107,16 +108,16 @@ namespace NoNameGame
             switch (road)
             {
                 case 0:
-                    pl.Move(0, -pl.speed);
+                    pl.Move(0, -pl.speed - buff);
                     break;
                 case 1:
-                    pl.Move(0, pl.speed);
+                    pl.Move(0, pl.speed + buff);
                     break;
                 case 2:
-                    pl.Move(-pl.speed, 0);
+                    pl.Move(-pl.speed - buff, 0);
                     break;
                 case 3:
-                    pl.Move(pl.speed, 0);
+                    pl.Move(pl.speed + buff, 0);
                     break;
             }
 
@@ -165,7 +166,7 @@ namespace NoNameGame
             chance_down--;
             if (chance_down == 0 && chance > 50)
             {
-                chance -= 10;
+                chance -= 5;
                 chance_down = 150;
             }
 

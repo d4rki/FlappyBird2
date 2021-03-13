@@ -13,19 +13,19 @@ namespace NoNameGame
         //стартовая инициализация
         public Player()
         {
-            size.x = 2;      //длина модельки игрока
-            size.y = 2;     //ширина
+            size.x = 10;      //длина модельки игрока
+            size.y = 10;     //ширина
             pos.x = 10;     //стартовая позиция игрока х
-            pos.y = 10;     //стартовая позиция игрока y
-            speed = 1;
+            pos.y = FormSize.y/2;     //стартовая позиция игрока y
+            speed = 4;
         }
 
         //перемещение игрока
         public void Move(int x, int y)
         {
-            if (pos.x + 2 + x < FormSize.x)
+            if (pos.x + 10 + x < FormSize.x && pos.x - 2 + x > 0)
                 pos.x += x;
-            if (pos.y + 2 + y < FormSize.y)
+            if (pos.y + 10 + y < FormSize.y && pos.y - 2 + y > 0)
                 pos.y += y;
         }
 

@@ -9,7 +9,8 @@ namespace NoNameGame
     class MovedBarier : Barier
     {
 
-        int speed;          //скорость движения
+        private int speed;          //скорость движения по вертикали
+        private int direction;
         public MovedBarier()
         {
             Generate();     //генерируем стартовые условия
@@ -17,14 +18,18 @@ namespace NoNameGame
             //и оставшиеся
             Random rnd = new Random();
 
-            //скорость перемещения по вертикали
-            speed = rnd.Next(-5, 5);
+            //скорость перемещения по вертикали и направление
+            speed = rnd.Next(0, 4);
+            direction = rnd.Next(0, 2);
         }
 
         public void MoveY(int sp)
         {
             pos.x -= sp;
-            pos.y += speed;
+            if (direction == 0)
+                pos.y -= speed;
+            else
+                pos.y += speed;
         }
 
     }
